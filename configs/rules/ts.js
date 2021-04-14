@@ -1,7 +1,5 @@
 module.exports = {
-	extends: [
-		`plugin:@typescript-eslint/recommended`,
-	],
+	extends: [`plugin:@typescript-eslint/recommended`],
 	plugins: [`@typescript-eslint`],
 	rules: {
 		"no-loop-func": `off`,

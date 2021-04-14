@@ -1,27 +1,21 @@
-# @j0hnm4r5/eslint-config
-
-[![GitHub Release](https://img.shields.io/github/v/release/j0hnm4r5/eslint-config.svg?style=flat)](https://github.com/j0hnm4r5/eslint-config/releases)
-![NPM Downloads](https://img.shields.io/npm/dw/@j0hnm4r5/eslint-config?style=flat)
-![GitHub Build](https://img.shields.io/github/workflow/status/j0hnm4r5/eslint-config/Publish%20Package?style=flat)
-
+# @actualsize/eslint-config
 
 ## About
 
 This [ESLint](https://eslint.org/) config is built on top of [Airbnb's config](https://www.npmjs.com/package/eslint-config-airbnb) and [Unicorn](https://www.npmjs.com/package/eslint-plugin-unicorn). It includes [Prettier](https://prettier.io/) to automatically format code.
 
-## Instructions
+## Usage Instructions
 
-1. Install `eslint` and this config in your project with `yarn add -D eslint @j0hnm4r5/eslint-config`
+1. Install `eslint` and this config in your project with `npm i -D eslint @actualsize/eslint-config` or `yarn add -D eslint @actualsize/eslint-config`
 
-2. In your `.eslintrc` file, add one of the following to the `extends` array:
+2. In your `.eslintrc.json` file, add one of the following to the `extends` array:
 
 |   |   |
 |---|---|
-| Vanilla (default): | `"@j0hnm4r5/eslint-config"` |
-| TypeScript without React : | `"@j0hnm4r5/eslint-config/configs/ts"` |
-| React: | `"@j0hnm4r5/eslint-config/configs/react"` |
-| TypeScript with React: | `"@j0hnm4r5/eslint-config/configs/ts-react"` |
-
+| Vanilla (default): | `"@actualsize/eslint-config"` |
+| TypeScript without React : | `"@actualsize/eslint-config/configs/ts"` |
+| React: | `"@actualsize/eslint-config/configs/react"` |
+| TypeScript with React: | `"@actualsize/eslint-config/configs/ts-react"` |
 
 That's it! All of the extended configs, Prettier, and some extra rule changes should just work out of the box.
 
@@ -29,11 +23,12 @@ That's it! All of the extended configs, Prettier, and some extra rule changes sh
 
 ## Example Usage
 
-This should change depending on the project, but here's what I like to use as a baseline:
+This should change depending on the project, but here's a good baseline for a vanilla project:
 
 **.eslintrc**
-```js
-// .eslintrc
+
+```json
+// .eslintrc.json
 {
   "env": {
     "node": true,
@@ -41,7 +36,7 @@ This should change depending on the project, but here's what I like to use as a 
     "es2020": true,
   },
   "extends": [
-    "@j0hnm4r5/eslint-config"
+    "@actualsize/eslint-config"
   ],
 }
 ```
@@ -52,10 +47,10 @@ This should change depending on the project, but here's what I like to use as a 
 
 If you're using TypeScript, add this to your `.eslintrc` too:
 
-```js
-// inside .eslintrc root object
+```json
+// inside .eslintrc.json root object
 "parserOptions": {
-	"project": "./tsconfig.json"
+    "project": "./tsconfig.json"
 }
 ```
 
@@ -63,7 +58,7 @@ As well as a **tsconfig.json** file at the root of the project:
 
 **Node**
 
-```js
+```json
 // tsconfig.json
 {
   "compilerOptions": {
@@ -85,7 +80,7 @@ As well as a **tsconfig.json** file at the root of the project:
 
 **Browser**
 
-```js
+```json
 // tsconfig.json
 {
   "compilerOptions": {
@@ -111,13 +106,14 @@ As well as a **tsconfig.json** file at the root of the project:
 
 ### Prettier
 
-And don't forget your Prettier configs! Here's what I use:
+And don't forget your Prettier configs!
 
 **.prettierrc**
-```js
+
+```json
 // .prettierrc
 {
-  "printWidth": 62, // perfect size for my vscode window
+  "printWidth": 62,
   "tabWidth": 2,
   "useTabs": true,
   "semicolons": true,
@@ -130,15 +126,3 @@ And don't forget your Prettier configs! Here's what I use:
   "arrowParens": "always"
 }
 ```
-
-**.prettierignore**
-```sh
-# .prettierignore
-package.json
-package-lock.json
-yarn.lock
-node_modules
-public
-.cache
-```
-
