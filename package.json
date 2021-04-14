@@ -1,6 +1,6 @@
 {
 	"name": "@actualsize/eslint-config",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"main": "index.js",
 	"author": "John Mars",
 	"license": "MIT",
@@ -31,7 +31,6 @@
 		"@types/node": "^14.14.37",
 		"@types/react": "^17.0.3",
 		"@types/react-dom": "^17.0.3",
-		"eslint-plugin-json": "^2.1.2",
 		"react": "^17.0.2",
 		"typescript": "^4.2.4"
 	}
