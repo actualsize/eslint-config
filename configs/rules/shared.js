@@ -3,7 +3,7 @@ module.exports = {
 		`plugin:promise/recommended`,
 		`plugin:eslint-comments/recommended`,
 		`plugin:unicorn/recommended`,
-		`plugin:prettier/recommended`,
+		`prettier`,
 	],
 	plugins: [`unicorn`, `no-secrets`, `promise`, `eslint-comments`],
 	rules: {
