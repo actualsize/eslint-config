@@ -33,5 +33,7 @@ module.exports = {
 		"unicorn/no-nested-ternary": `off`,
 		"unicorn/prevent-abbreviations": `off`,
 		"eslint-comments/disable-enable-pair": `off`,
+		"unicorn/no-array-for-each": "off",
+		"unicorn/prefer-module": "off",
 	},
 };
